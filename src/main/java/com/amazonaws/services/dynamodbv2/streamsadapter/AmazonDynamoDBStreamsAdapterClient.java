@@ -20,6 +20,8 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import com.amazonaws.AmazonClientException;
+import com.amazonaws.AmazonServiceException;
 import com.amazonaws.AmazonWebServiceRequest;
 import com.amazonaws.ClientConfiguration;
 import com.amazonaws.ResponseMetadata;
@@ -58,6 +60,8 @@ import com.amazonaws.services.kinesis.model.ListTagsForStreamResult;
 import com.amazonaws.services.kinesis.model.MergeShardsRequest;
 import com.amazonaws.services.kinesis.model.PutRecordRequest;
 import com.amazonaws.services.kinesis.model.PutRecordResult;
+import com.amazonaws.services.kinesis.model.PutRecordsRequest;
+import com.amazonaws.services.kinesis.model.PutRecordsResult;
 import com.amazonaws.services.kinesis.model.RemoveTagsFromStreamRequest;
 import com.amazonaws.services.kinesis.model.SplitShardRequest;
 
@@ -427,21 +431,25 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void createStream(CreateStreamRequest createStreamRequest) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void createStream(String streamName, Integer shardCount) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void deleteStream(DeleteStreamRequest deleteStreamRequest) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void deleteStream(String streamName) {
         throw new UnsupportedOperationException();
     }
@@ -452,6 +460,7 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
      * @return The response from the ListStreams service method, adapted for use with
      *          the AmazonKinesis model.
      */
+    @Override
     public ListStreamsResult listStreams(ListStreamsRequest listStreamsRequest) {
         ListStreamsRequestAdapter requestAdapter = new ListStreamsRequestAdapter(listStreamsRequest);
         try {
@@ -469,6 +478,7 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
      * @return The response from the ListStreams service method, adapted for use with
      *          the AmazonKinesis model.
      */
+    @Override
     public ListStreamsResult listStreams() {
         return this.listStreams(null/*limit*/, null/*exclusiveStartStreamName*/);
     }
@@ -478,6 +488,7 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
      * @return The response from the ListStreams service method, adapted for use with
      *          the AmazonKinesis model.
      */
+    @Override
     public ListStreamsResult listStreams(String exclusiveStartStreamName) {
         return this.listStreams(null/*limit*/, exclusiveStartStreamName);
     }
@@ -488,6 +499,7 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
      * @return The response from the ListStreams service method, adapted for use with
      *          the AmazonKinesis model.
      */
+    @Override
     public ListStreamsResult listStreams(Integer limit, String exclusiveStartStreamName) {
         ListStreamsRequest request = new ListStreamsRequest();
         request.setLimit(limit);
@@ -496,6 +508,7 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void mergeShards(MergeShardsRequest mergeShardsRequest) {
         throw new UnsupportedOperationException();
     }
@@ -506,16 +519,19 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void addTagsToStream(AddTagsToStreamRequest addTagsToStreamRequest) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public ListTagsForStreamResult listTagsForStream(ListTagsForStreamRequest listTagsForStreamRequest) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void removeTagsFromStream(RemoveTagsFromStreamRequest removeTagsFromStreamRequest) {
         throw new UnsupportedOperationException();
     }
@@ -527,13 +543,21 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
      * client has been shutdown, it should not be used to make any more
      * requests.
      */
+    @Override
     public void shutdown() {
         internalClient.shutdown();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public ResponseMetadata getCachedResponseMetadata(AmazonWebServiceRequest request) {
         throw new UnsupportedOperationException();
     }
+
+	@Override
+	public PutRecordsResult putRecords(PutRecordsRequest putRecordsRequest)
+			throws AmazonServiceException, AmazonClientException {
+		 throw new UnsupportedOperationException();
+	}
 
 }
