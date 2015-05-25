@@ -378,16 +378,19 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public PutRecordResult putRecord(PutRecordRequest putRecordRequest) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public PutRecordResult putRecord(String streamName, java.nio.ByteBuffer data, String partitionKey) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public PutRecordResult putRecord(String streamName, java.nio.ByteBuffer data, String partitionKey, String sequenceNumberForOrdering) {
         throw new UnsupportedOperationException();
     }
@@ -421,11 +424,13 @@ public class AmazonDynamoDBStreamsAdapterClient implements AmazonKinesis {
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void splitShard(SplitShardRequest splitShardRequest) {
         throw new UnsupportedOperationException();
     }
 
     // Not supported by the underlying Streams model
+    @Override
     public void splitShard(String streamName, String shardToSplit, String newStartingHashKey) {
         throw new UnsupportedOperationException();
     }
