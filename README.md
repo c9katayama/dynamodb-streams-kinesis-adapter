@@ -6,14 +6,12 @@ repositories {
    maven { url "https://github.com/c9katayama/dynamodb-streams-kinesis-adapter/mvn-repo" }
 }
 ```
-
 1. **add dependency**
 ```
 dependencies {
    compile("com.amazonaws.services.dynamodbstream:dynamodb-streams-kinesis-adapter:0.0.1")
 }  
 ``` 
-
 1. **build**
 
 
