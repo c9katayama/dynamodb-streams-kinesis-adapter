@@ -7,14 +7,14 @@ repositories {
 }
 ```
 
-2. **add dependency**
+1. **add dependency**
 ```
 dependencies {
    compile("com.amazonaws.services.dynamodbstream:dynamodb-streams-kinesis-adapter:0.0.1")
 }  
 ``` 
 
-3. **build**
+1. **build**
 
 
 below is original content.
