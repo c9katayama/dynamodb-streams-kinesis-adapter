@@ -1,3 +1,15 @@
+# How to Setup
+
+1. **add maven repository settings to your build.gradle**
+repositories {
+    maven { url "https://github.com/c9katayama/dynamodb-streams-kinesis-adapter/mvn-repo" }
+}
+
+2. **add complie**
+
+
+below is original content.
+
 # DynamoDB Streams Kinesis Adapter for Java
 
 **DynamoDB Streams Kinesis Adapter** implements the Amazon Kinesis interface so that your application can use KCL to consume and process data from a DynamoDB stream. You can get started in minutes using ***Maven***.

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <groupId>com.amazonaws.services.dynamodbv2</groupId>
+  <groupId>com.amazonaws.services.dynamodbstream</groupId>
   <artifactId>dynamodb-streams-kinesis-adapter</artifactId>
   <version>0.0.1</version>
   <versioning>
     <versions>
       <version>0.0.1</version>
     </versions>
-    <lastUpdated>20150611081903</lastUpdated>
+    <lastUpdated>20150611083342</lastUpdated>
   </versioning>
 </metadata>
