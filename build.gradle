@@ -5,6 +5,11 @@ buildscript {
 		mavenCentral()
     }
 }
+
+plugins {
+    id "de.undercouch.download" version "1.2"
+}
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'maven'
@@ -16,7 +21,7 @@ jar {
     baseName = 'dynamodb-streams-kinesis-adapter'
     version =  '0.0.1'
 }
- 
+
 repositories {
     mavenLocal()
     mavenCentral()
