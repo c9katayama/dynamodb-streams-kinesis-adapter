@@ -9,7 +9,7 @@ repositories {
 2. **add dependency**
 ```
 dependencies {
-   compile("c9katayama:dynamodb-streams-kinesis-adapter:0.0.1")
+   compile("c9katayama:dynamodb-streams:0.0.1") 
 }  
 ``` 
 3. **build**
