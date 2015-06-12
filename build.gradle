@@ -42,7 +42,7 @@ test {
 }
 
 //MavenRepository identity setting
-group = 'com.amazonaws.services.dynamodbstream'
+group = 'c9katayama'
 archivesBaseName = 'dynamodb-streams-kinesis-adapter' 
 version = '0.0.1'
 
