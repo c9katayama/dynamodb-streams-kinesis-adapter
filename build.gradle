@@ -18,7 +18,7 @@ sourceCompatibility = '1.8'
 targetCompatibility = '1.8'
 
 jar {
-    baseName = 'dynamodb-streams-kinesis-adapter'
+    baseName = 'dynamodb-streams'
     version =  '0.0.1'
 }
 
@@ -43,7 +43,7 @@ test {
 
 //MavenRepository identity setting
 group = 'c9katayama'
-archivesBaseName = 'dynamodb-streams-kinesis-adapter' 
+archivesBaseName = 'dynamodb-streams' 
 version = '0.0.1'
 
 uploadArchives {

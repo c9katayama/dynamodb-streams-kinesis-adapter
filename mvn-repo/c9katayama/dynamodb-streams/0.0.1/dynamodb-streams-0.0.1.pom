@@ -3,7 +3,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>c9katayama</groupId>
-  <artifactId>dynamodb-streams-kinesis-adapter</artifactId>
+  <artifactId>dynamodb-streams</artifactId>
   <version>0.0.1</version>
   <inceptionYear>2015</inceptionYear>
   <licenses>
