@@ -3,7 +3,7 @@
 1. **add maven repository settings to your build.gradle**
 ```
 repositories {
-   maven { url "https://github.com/c9katayama/dynamodb-streams-kinesis-adapter/mvn-repo" }
+   maven { url "https://github.com/c9katayama/dynamodb-streams-kinesis-adapter/tree/master/mvn-repo" }
 }
 ```
 2. **add dependency**
