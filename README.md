@@ -3,13 +3,13 @@
 1. **add maven repository settings to your build.gradle**
 ```
 repositories {
-   maven { url "https://github.com/c9katayama/dynamodb-streams-kinesis-adapter/mvn-repo" }
+   maven { url "https://github.com/c9katayama/dynamodb-streams-kinesis-adapter/tree/master/mvn-repo" }
 }
 ```
 2. **add dependency**
 ```
 dependencies {
-   compile("com.amazonaws.services.dynamodbstream:dynamodb-streams-kinesis-adapter:0.0.1")
+   compile("c9katayama:dynamodb-streams:0.0.1") 
 }  
 ``` 
 3. **build**
